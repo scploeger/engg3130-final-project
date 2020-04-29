@@ -6,31 +6,18 @@ One Paragraph of project description goes here
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisites
+### Prerequisites and Installation
 
-What things you need to install the software and how to install them
+1. Install conda using its [installation guide](https://docs.conda.io/projects/conda/en/latest/user-guide/install/)
 
-```
-Give examples
-```
+2. Activate the conda environment from the included ```environment.yaml``` file.
+Run:
+```conda env create -f environment.yml```
 
-### Installing
+3. Install detectron2 using its [installation guide](https://github.com/facebookresearch/detectron2/blob/master/INSTALL.md)
 
-A step by step series of examples that tell you how to get a development env running
+4. 
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
