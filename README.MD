@@ -1,6 +1,13 @@
-# Project Title
+# ENGG*3130 Final Project
+# Improving consistencey of object segmentation in video using FlowNet2 
+### By: Spencer Ploeger (0969141, sploeger@uoguelph.ca)
+### Lucas Dasovic ()
 
-One Paragraph of project description goes here
+Detectron2 is a computer vision framework based on pytorch. It can use many different models to perform object detection and segmentation, keypoint detection, panoptic segmentation, etc. It is very good at performing these tasks on single images, but major inconsistencies are introduced when attmepting to perform the same tasks on video. This is becasue the models Detectron2 is trained on are all based on single frame datasets. When predictions are made on videos, they are done as though the video is simply a list of independent frames.
+
+Issues arise because there is no notion or connectiveness between frames. This results in random artifacting in frames casued by changes in light, contrast, etc. whichs makes Detectron2 to temporarily and falsely detect objects that only dissapear very quickly afterwards. This inconsistencey is undesirable.
+
+To attempt to correct this, FlowNet2-Pytorch is used to create a new ground-truth layer for training Detectron2. It gives a layer of moving objects frame-to-frame. We can use this to create a loss function and attempt to re-train Detectron2.
 
 ## Getting Started
 
@@ -33,7 +40,7 @@ Your file tree should look like this when complete (from root directory):
 │   ├── driveby
 │   │   ├── 000000.flo
 │   │   ├── 000001.flo
-    │   │   ..........
+│   │   │   ..........
 │   │   ├── 000028.flo
 │   │   ├── 000029.flo
 │   │   └── images
@@ -45,7 +52,7 @@ Your file tree should look like this when complete (from root directory):
 │   ├── driving_on_401
 │   │   ├── 000000.flo
 │   │   ├── 000001.flo
-    │   │   ..........
+│   │   │   ..........
 │   │   ├── 000028.flo
 │   │   ├── 000029.flo
 │   │   └── images
@@ -57,7 +64,7 @@ Your file tree should look like this when complete (from root directory):
 │   └── walking
 │   │   ├── 000000.flo
 │   │   ├── 000001.flo
-    │   │   ..........
+│   │   │   ..........
 │   │   ├── 000028.flo
 │   │   ├── 000029.flo
 │       └── images
