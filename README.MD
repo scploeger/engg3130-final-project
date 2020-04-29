@@ -10,14 +10,224 @@ These instructions will get you a copy of the project up and running on your loc
 
 1. Install conda using its [installation guide](https://docs.conda.io/projects/conda/en/latest/user-guide/install/)
 
-2. Activate the conda environment from the included ```environment.yaml``` file.
+2. Install the conda environment from the included ```environment.yml``` file.
 Run:
-```conda env create -f environment.yml```
+```conda env create -f environment.yml```. The environment is called ```project-master```
+
+4. Activate the conda environment with ```conda activate project-master```
 
 3. Install detectron2 using its [installation guide](https://github.com/facebookresearch/detectron2/blob/master/INSTALL.md)
 
-4. 
+4. From this [google drive link](https://drive.google.com/drive/folders/1qXZd8nObw84jSYklAFjNnH6djVymr65N?usp=sharing), download all the folders into the root directory of your project. **Note: You can press "Download All" from google drive and then unzip into your project directory**
 
+Your file tree should look like this when complete (from root directory):
+
+```
+.
+├── configs
+│   ├── Base-RCNN-C4.yaml
+│   └── COCO-InstanceSegmentation
+│       └── mask_rcnn_R_50_C4_1x.yaml
+├── Final_Notebook.ipynb
+├── flow_data
+│   ├── driveby
+│   │   ├── 000000.flo
+│   │   ├── 000001.flo
+│   │   ├── 000002.flo
+│   │   ├── 000003.flo
+│   │   ├── 000004.flo
+│   │   ├── 000005.flo
+│   │   ├── 000006.flo
+│   │   ├── 000007.flo
+│   │   ├── 000008.flo
+│   │   ├── 000009.flo
+│   │   ├── 000010.flo
+│   │   ├── 000011.flo
+│   │   ├── 000012.flo
+│   │   ├── 000013.flo
+│   │   ├── 000014.flo
+│   │   ├── 000015.flo
+│   │   ├── 000016.flo
+│   │   ├── 000017.flo
+│   │   ├── 000018.flo
+│   │   ├── 000019.flo
+│   │   ├── 000020.flo
+│   │   ├── 000021.flo
+│   │   ├── 000022.flo
+│   │   ├── 000023.flo
+│   │   ├── 000024.flo
+│   │   ├── 000025.flo
+│   │   ├── 000026.flo
+│   │   ├── 000027.flo
+│   │   ├── 000028.flo
+│   │   ├── 000029.flo
+│   │   └── images
+│   │       ├── 000000.flo.png
+│   │       ├── 000001.flo.png
+│   │       ├── 000002.flo.png
+│   │       ├── 000003.flo.png
+│   │       ├── 000004.flo.png
+│   │       ├── 000005.flo.png
+│   │       ├── 000006.flo.png
+│   │       ├── 000007.flo.png
+│   │       ├── 000008.flo.png
+│   │       ├── 000009.flo.png
+│   │       ├── 000010.flo.png
+│   │       ├── 000011.flo.png
+│   │       ├── 000012.flo.png
+│   │       ├── 000013.flo.png
+│   │       ├── 000014.flo.png
+│   │       ├── 000015.flo.png
+│   │       ├── 000016.flo.png
+│   │       ├── 000017.flo.png
+│   │       ├── 000018.flo.png
+│   │       ├── 000019.flo.png
+│   │       ├── 000020.flo.png
+│   │       ├── 000021.flo.png
+│   │       ├── 000022.flo.png
+│   │       ├── 000023.flo.png
+│   │       ├── 000024.flo.png
+│   │       ├── 000025.flo.png
+│   │       ├── 000026.flo.png
+│   │       ├── 000027.flo.png
+│   │       ├── 000028.flo.png
+│   │       └── 000029.flo.png
+│   ├── driving_on_401
+│   │   ├── 000000.flo
+│   │   ├── 000001.flo
+│   │   ├── 000002.flo
+│   │   ├── 000003.flo
+│   │   ├── 000004.flo
+│   │   ├── 000005.flo
+│   │   ├── 000006.flo
+│   │   ├── 000007.flo
+│   │   ├── 000008.flo
+│   │   ├── 000009.flo
+│   │   ├── 000010.flo
+│   │   ├── 000011.flo
+│   │   ├── 000012.flo
+│   │   ├── 000013.flo
+│   │   ├── 000014.flo
+│   │   ├── 000015.flo
+│   │   ├── 000016.flo
+│   │   ├── 000017.flo
+│   │   ├── 000018.flo
+│   │   ├── 000019.flo
+│   │   ├── 000020.flo
+│   │   ├── 000021.flo
+│   │   ├── 000022.flo
+│   │   ├── 000023.flo
+│   │   ├── 000024.flo
+│   │   ├── 000025.flo
+│   │   ├── 000026.flo
+│   │   ├── 000027.flo
+│   │   ├── 000028.flo
+│   │   ├── 000029.flo
+│   │   └── images
+│   │       ├── 000000.flo.png
+│   │       ├── 000001.flo.png
+│   │       ├── 000002.flo.png
+│   │       ├── 000003.flo.png
+│   │       ├── 000004.flo.png
+│   │       ├── 000005.flo.png
+│   │       ├── 000006.flo.png
+│   │       ├── 000007.flo.png
+│   │       ├── 000008.flo.png
+│   │       ├── 000009.flo.png
+│   │       ├── 000010.flo.png
+│   │       ├── 000011.flo.png
+│   │       ├── 000012.flo.png
+│   │       ├── 000013.flo.png
+│   │       ├── 000014.flo.png
+│   │       ├── 000015.flo.png
+│   │       ├── 000016.flo.png
+│   │       ├── 000017.flo.png
+│   │       ├── 000018.flo.png
+│   │       ├── 000019.flo.png
+│   │       ├── 000020.flo.png
+│   │       ├── 000021.flo.png
+│   │       ├── 000022.flo.png
+│   │       ├── 000023.flo.png
+│   │       ├── 000024.flo.png
+│   │       ├── 000025.flo.png
+│   │       ├── 000026.flo.png
+│   │       ├── 000027.flo.png
+│   │       ├── 000028.flo.png
+│   │       └── 000029.flo.png
+│   └── walking
+│       ├── 000000.flo
+│       ├── 000001.flo
+│       ├── 000002.flo
+│       ├── 000003.flo
+│       ├── 000004.flo
+│       ├── 000005.flo
+│       ├── 000006.flo
+│       ├── 000007.flo
+│       ├── 000008.flo
+│       ├── 000009.flo
+│       ├── 000010.flo
+│       ├── 000011.flo
+│       ├── 000012.flo
+│       ├── 000013.flo
+│       ├── 000014.flo
+│       ├── 000015.flo
+│       ├── 000016.flo
+│       ├── 000017.flo
+│       ├── 000018.flo
+│       ├── 000019.flo
+│       ├── 000020.flo
+│       ├── 000021.flo
+│       ├── 000022.flo
+│       ├── 000023.flo
+│       ├── 000024.flo
+│       ├── 000025.flo
+│       ├── 000026.flo
+│       ├── 000027.flo
+│       ├── 000028.flo
+│       ├── 000029.flo
+│       └── images
+│           ├── 000000.flo.png
+│           ├── 000001.flo.png
+│           ├── 000002.flo.png
+│           ├── 000003.flo.png
+│           ├── 000004.flo.png
+│           ├── 000005.flo.png
+│           ├── 000006.flo.png
+│           ├── 000007.flo.png
+│           ├── 000008.flo.png
+│           ├── 000009.flo.png
+│           ├── 000010.flo.png
+│           ├── 000011.flo.png
+│           ├── 000012.flo.png
+│           ├── 000013.flo.png
+│           ├── 000014.flo.png
+│           ├── 000015.flo.png
+│           ├── 000016.flo.png
+│           ├── 000017.flo.png
+│           ├── 000018.flo.png
+│           ├── 000019.flo.png
+│           ├── 000020.flo.png
+│           ├── 000021.flo.png
+│           ├── 000022.flo.png
+│           ├── 000023.flo.png
+│           ├── 000024.flo.png
+│           ├── 000025.flo.png
+│           ├── 000026.flo.png
+│           ├── 000027.flo.png
+│           ├── 000028.flo.png
+│           └── 000029.flo.png
+├── models
+│   └── model_final_9243eb.pkl
+├── notebook_supporting
+│   └── scale.png
+├── README.MD
+└── sample_videos
+    ├── driveby.mp4
+    ├── driving_on_401.mp4
+    └── walking.mp4
+
+
+```
 
 ## Running the tests
 
