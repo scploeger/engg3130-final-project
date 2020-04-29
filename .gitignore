@@ -1,0 +1,11 @@
+/configs
+/flow_data
+/models
+/notebook_supporting
+/sample_videos
+
+*.png
+*.flo
+*.avi
+*.mp4
+*.pkl
