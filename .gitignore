@@ -3,6 +3,7 @@
 /models
 /notebook_supporting
 /sample_videos
+/utils
 
 *.png
 *.flo
