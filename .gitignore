@@ -6,6 +6,7 @@
 /sample_videos
 /utils
 
+*.jpg
 *.png
 *.flo
 *.avi
