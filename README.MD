@@ -35,7 +35,8 @@ Your file tree should look like this when complete (from root directory):
 │   ├── Base-RCNN-C4.yaml
 │   └── COCO-InstanceSegmentation
 │       └── mask_rcnn_R_50_C4_1x.yaml
-├── Final_Notebook.ipynb
+├── environment.yml
+├── Final_Notebook_v2.ipynb
 ├── flow_data
 │   ├── driveby
 │   │   ├── 000000.flo
@@ -62,80 +63,68 @@ Your file tree should look like this when complete (from root directory):
 │   │       ├── 000028.flo.png
 │   │       └── 000029.flo.png
 │   └── walking
-│   │   ├── 000000.flo
-│   │   ├── 000001.flo
-│   │   │   ..........
-│   │   ├── 000028.flo
-│   │   ├── 000029.flo
+│       ├── 000000.flo
+│       ├── 000001.flo
+│       │   ..........
+│       ├── 000028.flo
+│       ├── 000029.flo
 │       └── images
-│   │       ├── 000000.flo.png
-│   │       ├── 000001.flo.png
-│   │       │   ..........
-│   │       ├── 000028.flo.png
-│   │       └── 000029.flo.png
+│           ├── 000000.flo.png
+│           ├── 000001.flo.png
+│           │   ..........
+│           ├── 000028.flo.png
+│           └── 000029.flo.png
 ├── models
-│   └── model_final_9243eb.pkl
+│   ├── __init__.py
+│   ├── mobilenet.py
+│   ├── model_final_9243eb.pkl
+│   ├── __pycache__
+│   │   ├── __init__.cpython-38.pyc
+│   │   ├── mobilenet.cpython-38.pyc
+│   │   └── resnet.cpython-38.pyc
+│   └── resnet.py
 ├── notebook_supporting
 │   └── scale.png
 ├── README.MD
-└── sample_videos
-    ├── driveby.mp4
-    ├── driving_on_401.mp4
-    └── walking.mp4
-
-
+├── sample_images
+│   └── VOC
+│       ├── 2007_004189.jpg
+│       ├── 2007_004189.png
+│       ├── 2007_006449.png
+│       ├── 2008_002536.jpg
+│       ├── 2008_002536.png
+│       ├── 2010_005582.jpg
+│       ├── 2010_005582.png
+│       └── car.png
+├── sample_videos
+│   ├── driveby.mp4
+│   ├── driving_on_401.mp4
+│   └── walking.mp4
+└── utils
+    ├── cmap.npy
+    ├── cs_cmap.npy
+    ├── helpers.py
+    ├── __init__.py
+    ├── layer_factory.py
+    └── __pycache__
 ```
 
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+* [Detectron2](https://github.com/facebookresearch/detectron2) - To generate segmentation masks
+* [Lightweight refinent](https://github.com/DrSleep/light-weight-refinenet) - To generate segmentation masks
+* [PyTorch](https://pytorch.org/) - An open source machine learning framework
+* [FlowNet2](https://github.com/dancelogue/flownet2-pytorch) - Used to create flow masks
+ 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Spencer Ploeger** - *Initial work*
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Thor. Thor literally spent hours with me this semster, and has taght me so much about ML, CV, and python in general. Thank you!!!
+
